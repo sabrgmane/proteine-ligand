@@ -1,0 +1,8 @@
+uniprot_id: P00325
+ligands:
+- name: NAD(+)
+  chebi_id: CHEBI:57540
+  smiles: NC(=O)c1ccc[n+]([C@@H]2O[C@H](COP(=O)([O-])OP(=O)([O-])OC[C@H]3O[C@@H](n4cnc5c(N)ncnc54)[C@H](O)[C@@H]3O)[C@@H](O)[C@H]2O)c1
+- name: Zn(2+)
+  chebi_id: CHEBI:29105
+  smiles: '[Zn+2]'
