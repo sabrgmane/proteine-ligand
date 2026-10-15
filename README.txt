@@ -1,32 +1,17 @@
-Points d'amélioration :
----------------------
+## Future Enhancements
 
-- La moyenne simple utilisée pour calculer le score de classement peut pénaliser fortement certaines colonnes. Il serait préférable de définir un score pondéré reflétant mieux la pertinence catalytique.
+- Replace the simple average ranking score with a weighted score that better reflects catalytic relevance.
+- Incorporate more robust descriptors, such as phylogenetic conservation scores for catalytic site residues.
+- Support remote BLAST searches and allow switching between local and remote databases.
+- Replace or complement Swiss-Prot with RefSeq/NR to increase BLAST hit coverage.
+- Run Boltz-2 on GPU when compatible hardware is available.
+- Separate generic ligand descriptors from ligand-specific descriptors.
+- Move long shell commands into dedicated .sh scripts.
+- Improve documentation and code comments throughout the workflow.
+- Set up dedicated Conda environments for each pipeline step to isolate dependencies, prevent version conflicts, and improve reproducibility.
 
-- Intégrer des descripteurs plus robustes, par exemple un score de conservation phylogénétique des résidus du site catalytique, afin de prioriser les candidats conservant ce site.
+## Useful Commands
 
-- Réaliser le BLAST en mode remote ou permettre le choix entre base locale et base distante.
-
-- Remplacer ou compléter Swiss-Prot par RefSeq/NR pour augmenter la couverture des hits BLAST.
-
-- Exécuter Boltz-2 sur GPU plutôt que sur CPU lorsque le matériel le permet.
-
-- Séparer les descripteurs génériques applicables à tout ligand des descripteurs spécifiques à la nature chimique du ligand.
-
-- Externaliser les commandes shell longues dans des scripts .sh
-
-- Ajouter une documentation et des commentaires détaillés dans l'ensemble du workflow.
-
-- Compléter la création d'environnements conda dédiés à chaque étape du pipeline afin d'isoler les dépendances, éviter les conflits de versions et améliorer la reproductibilité du workflow.
-
-
-Commandes utiles :
-----------------
+```bash
 snakemake --use-conda --cores all -p
-
-
-
-
-
-
-
+```
